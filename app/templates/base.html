@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Alexeev / {{title}}</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/root.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/content.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
+</head>
+<body>
+	<header id='header'>
+		<div class="container">
+			<div class="top__line">
+				<div class="logo">
+					<a href="/" class="logo__link">Alexeev</a>
+				</div>
+
+				<ul class="top__menu">
+					<li class="top__menu__item">
+						<a href="/posts" class="top__menu__link">Posts</a>
+					</li>
+					<li class="top__menu__item">
+						<a href="/articles" class="top__menu__link">Articles</a>
+					</li>
+					<li class="top__menu__item">
+						<a href="/contacts" class="top__menu__link">Contacts</a>
+					</li>
+					<li class="top__menu__item">
+						<a href="/gallery" class="top__menu__link">Gallery</a>
+					</li>
+				</ul>
+
+				<div class="bar">
+					<div class="bar__item search">
+						<a class="bar__item__link" href="https://t.me/hex_warehouse"><i class="uil uil-telegram"></i></a>
+					</div>
+					<div class="bar__item user">
+						<a class="bar__item__link" href="/projects"><i class="uil uil-archive"></i></a>
+					</div>
+					<div class="bar__item user">
+						<a class="bar__item__link" href="https://github.com/alexeev-prog"><i class="uil uil-code-branch"></i></a>
+					</div>
+
+					<div class="burger">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main class="content">
+		<div class="container">
+			{% block content %}
+			{% endblock %}
+		</div>
+	</main>
+
+	<footer class="footer">
+		<div class="container">
+			<p class="small">Copyright (C) 2024 Alexeev Bronislav</p>
+			<p class="small">All rights reversed</p>
+			<p><a href="mailto:alexeev.dev@mail.ru" class='mail-link'>alexeev.dev@mail.ru</a></p>
+		</div>
+	</footer>
+
+	<script src="{{ url_for('static', filename='js/menu.js') }}"></script>
+</body>
+</html>

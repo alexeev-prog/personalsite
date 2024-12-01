@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{%block content%}
+
+<div class="preview-image">
+	<p class="article-title">Last Articles</p>
+	<p class='subtitle center'>From <a href="https://habr.com/ru/users/drargentum/publications/articles">Habr</a></p>
+</div>
+
+{% for article in articles %}
+	<div class="article-block">
+	<h3 class="center article-title">{{article['article_name']}}</h3>
+	<a href="{{article['article_link']}}" class="lite-button">Read Article</a>
+	</div>
+{% endfor %}
+
+{%endblock%}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{%block content%}
+
+<div class="preview-image">
+	<p class="article-title">Last Posts</p>
+	<p class='subtitle center'>From <a href="https://t.me/hex_warehouse">Telegram</a></p>
+</div>
+
+{% for post in posts %}
+	<hr>
+	<div class="post">
+		{{post|safe}}
+	</div>
+{% endfor %}
+
+{%endblock%}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{%block content%}
+
+<div class="preview-image">
+	<p class="article-title">{{code}}</p>
+	<p class='subtitle center'>{{description}}</p>
+</div>
+
+<h2 class="center">An HTTP error occurred: {{code}}</h2>
+
+<div class="button-div"><a href='/' class="button-home">Ah s--t, here we go again</a></div>
+
+{%endblock%}
