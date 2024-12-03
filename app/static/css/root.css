@@ -76,10 +76,163 @@
 	scrollbar-color: var(--alt-accent-color) var(--invert-bg-color);   /* плашка скролла и дорожка */ 
 }
 
+blockquote {
+	text-align: right;
+	font-style: italic:;
+	font-family: "PT Sans", sans-serif;
+	background: var(--second-bg-color);
+	padding: 5px;
+	width: 100%;
+}
+
 html {
 	color-scheme: dark light;
 	&[data-theme=light] { color-scheme: light; }
 	&[data-theme=dark] { color-scheme: dark; }
+}
+
+.span-key {
+	font-size: 15px;
+	color: #007bff;
+}
+
+pre {
+		
+			margin-bottom: 10px;
+  padding: 5px;
+			font-family: "IBM Plex Mono", monospace;
+			margin: 10px;
+			padding: 10px;
+			background: ;
+			white-space: pre-wrap;		 /* Since CSS 2.1 */
+			white-space: -moz-pre-wrap;	 /* Mozilla, since 1999 */
+			white-space: -pre-wrap;		 /* Opera 4-6 */
+			white-space: -o-pre-wrap;	 /* Opera 7 */
+			word-wrap: break-word;		 /* Internet Explorer 5.5+ */
+			font-weight: regular;
+			font-weight: 400;
+	font-style: none;
+		}
+		code{
+			font-family: "IBM Plex Mono", monospace;
+			font-weight: 400;
+	font-style: none;
+		border-radius: 5px;
+	}
+		pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+  font-weight: 400;
+	font-style: none;
+}
+code.hljs {
+	font-weight: 400;
+	font-style: none;
+  padding: 3px 5px
+}
+.hljs {
+	font-weight: 400;
+	font-style: none;
+	font-weight: 400;
+  color: #383a42;
+  background: var(--second-bg-color);
+}
+.hljs-comment,
+.hljs-quote {
+	font-weight: 400;
+	font-style: none;
+  color: #a0a1a7;
+  font-family: "IBM Plex Mono", monospace;
+}
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+	font-weight: 400;
+	font-style: none;
+  color: #a626a4
+}
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+	font-weight: 400;
+	font-style: none;
+  color: #e45649
+}
+.hljs-literal {
+	font-weight: 400;
+	font-style: none;
+  color: #0184bb
+}
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+	font-weight: 400;
+	font-style: none;
+  color: #50a14f
+}
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+	font-weight: 400;
+	font-style: none;
+  color: #986801
+}
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+	font-weight: 400;
+	font-style: none;
+  color: #4078f2
+}
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+	font-weight: 400;
+	font-style: none;
+  color: #c18401
+}
+.hljs-emphasis {
+	font-weight: 400;
+	font-style: none;
+	font-family: "IBM Plex Mono", monospace;
+}
+.hljs-strong {
+	font-weight: 400;
+	font-style: none;
+	font-family: "IBM Plex Mono", monospace;
+}
+.hljs-link {
+	font-weight: 400;
+	font-style: none;
+  text-decoration: underline
+}
+
+a {
+	color: coral;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: var(--main-accent-color);
+}
+
+hr {
+	box-sizing: content-box; /* 1 */
+	height: 1; /* 1 */
+	overflow: visible; /* 2 */
 }
 
 body {

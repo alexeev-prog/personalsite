@@ -2,7 +2,9 @@
 """Исходный код веб-приложения перепродажи автомобилей
 Разработчик: Алексеев Бронислав"""
 from flask import Flask
-from app.routes import main_bp
+from app.routes import main_bp, flatpages
+
+
 
 
 def create_app():
@@ -12,6 +14,7 @@ def create_app():
 	# + BaseConfig - базовый конфиг
 	# + DevelopmentConfig - конфиг для разработки
 	app.config.from_object('config.DevelopmentConfig')
+	flatpages.init_app(app)
 	# Инициализация блюпринтов
 	app.register_blueprint(main_bp)
 

@@ -1,10 +1,13 @@
 #!/usr/bin/python3
 import requests
 import functools
+import markdown
 from bs4 import BeautifulSoup
 from flask import Blueprint, render_template, url_for, redirect, request, flash, get_flashed_messages
+from flask_flatpages import FlatPages
 
 main_bp = Blueprint('main', __name__)
+flatpages = FlatPages()
 
 
 @main_bp.app_errorhandler(404)
@@ -23,6 +26,18 @@ def handle_401(error):
 @main_bp.route('/')
 def index():
 	return render_template('index.html', title='Home')
+
+
+@main_bp.route('/docs', methods=['GET'])
+def docs():
+	name = request.args.get("name", default='default')
+
+	if name == 'default':
+		return render_template('docs.html', title='Docs')
+	else:
+		path = '{}/{}'.format('posts', name.replace('.md', ''))
+		post = flatpages.get_or_404(path)
+		return render_template('doc.html', post=markdown.markdown(post.html), name=name)
 
 
 @main_bp.route('/projects')
